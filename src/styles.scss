@@ -1,1 +1,6 @@
-/* You can add global styles to this file, and also import other style files */
+/* estilos globais. Definimos aqui estilos globais para que se estendam a todos os outros componentes da aplicação. */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
