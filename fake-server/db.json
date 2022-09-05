@@ -1,3 +1,10 @@
 {
-  "list-burguer": []
+  "list-burguer": [
+    {
+      "name": "",
+      "ingredients": "",
+      "price": 0,
+      "id": 1
+    }
+  ]
 }
