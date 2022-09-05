@@ -1,3 +1,10 @@
 {
-  "list-food": []
+  "list-burguer": [
+    {
+      "id": 1,
+      "name": "Hamburguer Hot",
+      "ingredients": "Hamburguer artesanal, alface, cebola, molho inglês, queijo, molho de pimenta.",
+      "price": 25.9
+    }
+  ]
 }

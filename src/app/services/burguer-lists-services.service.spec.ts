@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { BurguerListsServicesService } from './burguer-lists-services.service';
+import { BurguerListsService } from './burguer-lists-services.service';
 
-describe('BurguerListsServicesService', () => {
-  let service: BurguerListsServicesService;
+describe('BurguerListsService', () => {
+  let service: BurguerListsService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(BurguerListsServicesService);
+    service = TestBed.inject(BurguerListsService);
   });
 
   it('should be created', () => {

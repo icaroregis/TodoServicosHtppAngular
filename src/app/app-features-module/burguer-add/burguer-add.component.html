@@ -1,17 +1,17 @@
 <form action="">
   <fieldset>
     <div>
-      <input type="text" placeholder="insira o nome do hamburguer">
+      <input #name type="text" placeholder="insira o nome do hamburguer">
     </div>
 
     <div>
-      <input type="text" placeholder="insira os ingredientes do hamburguer">
+      <input #ingredients type="text" placeholder="insira os ingredientes do hamburguer">
     </div>
 
     <div>
-      <input type="text" placeholder="insira o preço que deseja cadastrar">
+      <input #price type="text" placeholder="insira o preço que deseja cadastrar">
     </div>
 
-    <button>Adicionar Hamburguer</button>
+    <button (click)="listAddItem(name.value, ingredients.value, number(price.value))">Adicionar Hamburguer</button>
   </fieldset>
 </form>

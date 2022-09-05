@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { IBurguerList } from '../../module/iburguer-list';
+import { BurguerListsService } from 'src/app/services/burguer-lists-services.service';
 
 @Component({
   selector: 'app-burguer-list',
@@ -6,7 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./burguer-list.component.scss'],
 })
 export class BurguerListComponent implements OnInit {
-  constructor() {}
+  public listBurguer: IBurguerList | any = [];
 
-  ngOnInit(): void {}
+  constructor(private burguerListsServices: BurguerListsService) {}
+
+  ngOnInit(): void {
+    this.burguerListsServices.getListBurguer().subscribe({
+      next: (response) => (this.listBurguer = response),
+      error: (error) => console.log(error),
+    });
+  }
 }
