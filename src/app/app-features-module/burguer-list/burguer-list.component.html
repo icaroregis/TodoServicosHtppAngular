@@ -1,11 +1,13 @@
 <ul>
   <li *ngFor="let item of listBurguer">
     <h4>id: {{ item.id }}</h4>
-    <h4>nome: {{ item.name }}</h4>
-    <h4>ingredientes: {{ item.ingredients }}</h4>
-    <h5>preço: R$ {{ item.price }}</h5>
+    <h4>nome: <input type="text" [(ngModel)]="item.name"></h4>
+    <h4>ingredientes: <input type="text" [(ngModel)]="item.ingredients"></h4>
+    <h5>preço: R$ <input type="text" [(ngModel)]="item.price"></h5>
 
-    <button>editar registro</button>
-    <button id="deletar">deletar registro</button>
+    <button (keyup.enter)="edit(number(item.id), item.name, item.ingredients, number(item.price))" (click)="edit(number(item.id), item.name, item.ingredients, number(item.price))">editar registro</button>
+    <button (click)="delete(number(item.id))" id="deletar">
+      deletar registro
+    </button>
   </li>
 </ul>

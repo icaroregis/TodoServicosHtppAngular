@@ -24,7 +24,7 @@ export class BurguerAddComponent implements OnInit {
     };
 
     this.burguerListsServices.postListBurguer(newObject).subscribe({
-      next: (response) => console.log(response),
+      next: (response) => this.burguerListsServices.foodListAlert(response),
       error: (error) => error,
     });
   }
